@@ -55,7 +55,28 @@ function setupMobileMenu() {
 }
 
 function setupContactForm() {
-    $('#contact-form').addEventListener('submit', (event) => { event.preventDefault(); event.currentTarget.reset(); const success = $('#form-success'); success.hidden = false; window.setTimeout(() => { success.hidden = true; }, 5000); });
+    $('#contact-form').addEventListener('submit', async (event) => {
+        event.preventDefault();
+        const form = event.currentTarget;
+        const success = $('#form-success');
+        const submitButton = form.querySelector('button[type="submit"]');
+        submitButton.disabled = true;
+        try {
+            const payload = new FormData(form);
+            payload.set('form-name', 'contact');
+            const response = await fetch('/', { method: 'POST', headers: { 'Content-Type': 'application/x-www-form-urlencoded' }, body: new URLSearchParams(payload).toString() });
+            if (!response.ok) throw new Error('Form submission failed');
+            form.reset();
+            success.textContent = 'Solicitação recebida com sucesso. Retornaremos o contato em até 2 horas úteis.';
+            success.hidden = false;
+            window.setTimeout(() => { success.hidden = true; }, 5000);
+        } catch (error) {
+            success.textContent = 'Não foi possível enviar agora. Tente novamente ou use o WhatsApp.';
+            success.hidden = false;
+        } finally {
+            submitButton.disabled = false;
+        }
+    });
 }
 
 function setupParticles() {
