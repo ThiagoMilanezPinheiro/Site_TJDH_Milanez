@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0b132b">
+  <meta name="description" content="A TJDH_Milanez ANALYTIXAI transforma dados em decisões estratégicas com Business Intelligence, engenharia de dados e inteligência artificial.">
+  <title>TJDH_Milanez ANALYTIXAI | Dados que geram resultados</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            midnight: "#0B132B",
+            navy: "#1C2541",
+            cyan: "#54D6E8",
+            turquoise: "#45E0C0",
+            mist: "#D8E4F0"
+          },
+          fontFamily: {
+            sans: ["Inter", "ui-sans-serif", "system-ui", "sans-serif"]
+          }
+        }
+      }
+    };
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root { color-scheme: dark; }
+    html { scroll-behavior: smooth; scroll-padding-top: 6rem; }
+    body { font-family: "DM Sans", sans-serif; }
+    h1, h2, h3, .brand { font-family: "Space Grotesk", sans-serif; }
+    .grid-glow {
+      background-image: linear-gradient(rgba(84,214,232,.055) 1px, transparent 1px), linear-gradient(90deg, rgba(84,214,232,.055) 1px, transparent 1px);
+      background-size: 42px 42px;
+      mask-image: linear-gradient(to bottom, black, transparent 90%);
+    }
+    .glass { background: linear-gradient(145deg, rgba(28,37,65,.82), rgba(17,28,52,.72)); border: 1px solid rgba(148,182,207,.14); }
+    .glow { box-shadow: 0 0 48px rgba(69,224,192,.12); }
+    .text-gradient { background: linear-gradient(95deg, #fff 5%, #8ce7ee 54%, #45e0c0); color: transparent; background-clip: text; }
+    .orb { background: radial-gradient(circle, rgba(69,224,192,.17), rgba(84,214,232,.08) 38%, transparent 70%); }
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      *, *::before, *::after { animation-duration: .01ms !important; transition-duration: .01ms !important; }
+    }
+  </style>
+</head>
+<body class="bg-midnight text-slate-100 antialiased selection:bg-turquoise/30 selection:text-white">
+  <header class="fixed inset-x-0 top-0 z-50 border-b border-white/[.07] bg-midnight/85 backdrop-blur-xl">
+    <nav class="mx-auto flex max-w-7xl items-center justify-between px-5 py-4 lg:px-8" aria-label="Navegação principal">
+      <a class="flex items-center gap-3" href="#inicio" aria-label="TJDH Milanez ANALYTIXAI - início">
+        <span class="grid h-10 w-10 place-items-center rounded-xl border border-cyan/30 bg-cyan/10 text-cyan">
+          <svg aria-hidden="true" viewBox="0 0 40 40" class="h-7 w-7" fill="none">
+            <path d="M12 26.5h16a6 6 0 0 0 .5-12A9 9 0 0 0 11.1 17 4.8 4.8 0 0 0 12 26.5Z" stroke="currentColor" stroke-width="1.7"/>
+            <path d="M16 22v-3m4 3v-6m4 6v-3m-8 6h8" stroke="#45E0C0" stroke-width="1.7" stroke-linecap="round"/>
+            <circle cx="16" cy="18" r="1" fill="#45E0C0"/><circle cx="20" cy="15" r="1" fill="#45E0C0"/><circle cx="24" cy="18" r="1" fill="#45E0C0"/>
+          </svg>
+        </span>
+        <span class="leading-tight"><span class="brand block text-sm font-bold tracking-wide text-white">TJDH_Milanez</span><span class="text-[10px] font-semibold tracking-[.22em] text-cyan">ANALYTIXAI</span></span>
+      </a>
+      <button id="menu-toggle" class="rounded-lg border border-white/10 p-2 text-slate-200 md:hidden" aria-label="Abrir menu" aria-expanded="false" aria-controls="main-menu">
+        <svg aria-hidden="true" class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 7h16M4 12h16M4 17h16" stroke-linecap="round"/></svg>
+      </button>
+      <div id="main-menu" class="absolute inset-x-0 top-full hidden border-b border-white/10 bg-midnight/95 px-5 pb-5 pt-2 backdrop-blur-xl md:static md:flex md:items-center md:gap-7 md:border-0 md:bg-transparent md:p-0">
+        <a class="menu-link block py-2 text-sm text-slate-300 transition hover:text-cyan md:py-0" href="#inicio">Início</a>
+        <a class="menu-link block py-2 text-sm text-slate-300 transition hover:text-cyan md:py-0" href="#sobre">Sobre</a>
+        <a class="menu-link block py-2 text-sm text-slate-300 transition hover:text-cyan md:py-0" href="#servicos">Serviços</a>
+        <a class="menu-link block py-2 text-sm text-slate-300 transition hover:text-cyan md:py-0" href="#cases">Cases</a>
+        <a class="menu-link block py-2 text-sm text-slate-300 transition hover:text-cyan md:py-0" href="#simulador">Simulador de ROI</a>
+        <a class="menu-link block py-2 text-sm text-slate-300 transition hover:text-cyan md:py-0" href="#contato">Contato</a>
+        <a href="https://wa.me/5521966606909?text=Ol%C3%A1%2C%20gostaria%20de%20falar%20com%20um%20consultor." target="_blank" rel="noopener noreferrer" class="mt-3 inline-flex items-center justify-center rounded-lg bg-turquoise px-4 py-2.5 text-sm font-bold text-midnight transition hover:bg-cyan md:mt-0">Falar com Consultor</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section id="inicio" class="relative isolate overflow-hidden pt-32 sm:pt-40">
+      <div class="grid-glow absolute inset-0 -z-10"></div>
+      <div class="orb absolute -right-48 top-12 -z-10 h-[36rem] w-[48rem]"></div>
+      <div class="mx-auto grid max-w-7xl items-center gap-12 px-5 pb-24 pt-8 lg:grid-cols-[1.08fr_.92fr] lg:px-8 lg:pb-32">
+        <div>
+          <div class="mb-7 inline-flex items-center gap-2 rounded-full border border-turquoise/20 bg-turquoise/[.07] px-3.5 py-2 text-xs font-semibold tracking-wide text-turquoise">
+            <span class="h-1.5 w-1.5 rounded-full bg-turquoise shadow-[0_0_10px_#45e0c0]"></span>
+            CONSULTORIA EM DADOS, BI &amp; IA
+          </div>
+          <h1 class="max-w-3xl text-5xl font-semibold leading-[1.08] tracking-tight text-gradient sm:text-6xl lg:text-[4.5rem]">Transformando Dados em Resultados Reais</h1>
+          <p class="mt-6 max-w-xl text-lg leading-8 text-slate-300">Business Intelligence, dashboards e inteligência artificial para revelar oportunidades, simplificar processos e apoiar decisões com confiança.</p>
+          <div class="mt-9 flex flex-col gap-3 sm:flex-row">
+            <a href="https://wa.me/5521966606909?text=Ol%C3%A1%2C%20quero%20agendar%20um%20diagn%C3%B3stico%20de%20dados." target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2 rounded-xl bg-turquoise px-6 py-3.5 font-bold text-midnight shadow-lg shadow-turquoise/10 transition hover:-translate-y-0.5 hover:bg-cyan">
+              Agendar diagnóstico <span aria-hidden="true">↗</span>
+            </a>
+            <a href="#servicos" class="inline-flex items-center justify-center rounded-xl border border-white/15 px-6 py-3.5 font-semibold text-white transition hover:border-cyan/50 hover:bg-white/[.04]">Conheça as soluções</a>
+          </div>
+          <div class="mt-12 flex flex-wrap gap-x-8 gap-y-4 border-t border-white/10 pt-6 text-sm text-slate-400">
+            <span class="flex items-center gap-2"><span class="text-turquoise">✦</span> Decisões orientadas por dados</span>
+            <span class="flex items-center gap-2"><span class="text-turquoise">✦</span> Soluções sob medida</span>
+          </div>
+        </div>
+        <div class="relative mx-auto w-full max-w-lg">
+          <div class="orb absolute inset-0 scale-125"></div>
+          <div class="glass glow relative overflow-hidden rounded-3xl p-5 sm:p-7">
+            <div class="flex items-center justify-between border-b border-white/10 pb-4">
+              <div><p class="text-xs font-medium uppercase tracking-[.18em] text-slate-400">Visão estratégica</p><p class="mt-1 font-semibold text-white">Seu negócio, em perspectiva</p></div>
+              <span class="rounded-lg border border-turquoise/20 bg-turquoise/10 px-2.5 py-1 text-xs font-medium text-turquoise">LIVE DATA</span>
+            </div>
+            <svg role="img" aria-label="Ilustração de nuvem de dados conectada a circuitos" viewBox="0 0 480 310" class="my-3 w-full">
+              <defs><linearGradient id="cloudStroke" x1="70" y1="75" x2="400" y2="260" gradientUnits="userSpaceOnUse"><stop stop-color="#54D6E8"/><stop offset="1" stop-color="#45E0C0"/></linearGradient><filter id="blur"><feGaussianBlur stdDeviation="14"/></filter></defs>
+              <circle cx="242" cy="137" r="92" fill="#45E0C0" opacity=".12" filter="url(#blur)"/>
+              <g fill="none" stroke="url(#cloudStroke)" stroke-width="2">
+                <path d="M156 153h-53v58h-34m188-49h72v-55h54m-181 95h-51v51h-56m214-43h63v42h46M240 188v65h-31"/>
+                <path d="M177 144c0-24 19-43 43-43 12 0 22 5 30 13a43 43 0 0 1 73 29c17 2 29 16 29 32 0 18-14 33-33 33H190c-20 0-36-15-36-34 0-14 9-26 23-30Z" fill="#1C2541" fill-opacity=".72"/>
+                <path d="M215 154v-15m35 15v-31m35 31v-15M205 173h91m-66 0v15m36-15v15" stroke-linecap="round"/>
+              </g>
+              <g fill="#45E0C0"><circle cx="69" cy="211" r="5"/><circle cx="350" cy="107" r="5"/><circle cx="103" cy="257" r="5"/><circle cx="384" cy="244" r="5"/><circle cx="209" cy="253" r="5"/><circle cx="215" cy="139" r="3"/><circle cx="250" cy="123" r="3"/><circle cx="285" cy="139" r="3"/></g>
+              <g fill="#D8E4F0" opacity=".55"><circle cx="120" cy="112" r="2"/><circle cx="355" cy="188" r="2"/><circle cx="145" cy="276" r="2"/><circle cx="331" cy="66" r="2"/></g>
+            </svg>
+            <div class="grid grid-cols-3 gap-3">
+              <div class="rounded-xl border border-white/[.06] bg-midnight/40 p-3"><p class="text-[10px] uppercase tracking-wider text-slate-500">Dados</p><p class="mt-1 text-sm font-semibold text-white">Conectados</p></div>
+              <div class="rounded-xl border border-white/[.06] bg-midnight/40 p-3"><p class="text-[10px] uppercase tracking-wider text-slate-500">Insights</p><p class="mt-1 text-sm font-semibold text-cyan">Em tempo real</p></div>
+              <div class="rounded-xl border border-white/[.06] bg-midnight/40 p-3"><p class="text-[10px] uppercase tracking-wider text-slate-500">Decisões</p><p class="mt-1 text-sm font-semibold text-turquoise">Mais seguras</p></div>
+            </div>
+          </div>
+          <div class="absolute -bottom-5 -left-5 hidden rounded-2xl border border-white/10 bg-navy/90 px-4 py-3 shadow-xl sm:block">
+            <p class="text-xs text-slate-400">Da informação à ação</p><p class="mt-1 text-sm font-semibold text-white">Inteligência que impulsiona</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="sobre" class="border-y border-white/[.06] bg-[#101a34]">
+      <div class="mx-auto grid max-w-7xl gap-10 px-5 py-20 lg:grid-cols-[.75fr_1.25fr] lg:items-center lg:px-8 lg:py-24">
+        <div>
+          <p class="text-sm font-bold uppercase tracking-[.2em] text-turquoise">Sobre a consultoria</p>
+          <h2 class="mt-4 text-3xl font-semibold leading-tight text-white sm:text-4xl">Tecnologia com propósito.<br><span class="text-cyan">Estratégia com clareza.</span></h2>
+        </div>
+        <div class="max-w-3xl">
+          <p class="text-lg leading-8 text-slate-300">A TJDH_Milanez ANALYTIXAI, liderada por <strong class="font-semibold text-white">Thiago Milanez</strong>, ajuda organizações a transformar dados dispersos em inteligência prática. Unimos engenharia de dados, automação e análise para construir uma visão confiável do negócio.</p>
+          <p class="mt-4 leading-7 text-slate-400">Nosso trabalho vai além da tecnologia: entendemos os desafios de cada operação e criamos soluções que apoiam decisões estratégicas, reduzem tarefas manuais e abrem espaço para novas oportunidades.</p>
+          <div class="mt-8 flex flex-wrap gap-3"><span class="rounded-full border border-white/10 px-4 py-2 text-sm text-slate-300">Engenharia de dados</span><span class="rounded-full border border-white/10 px-4 py-2 text-sm text-slate-300">Automação inteligente</span><span class="rounded-full border border-white/10 px-4 py-2 text-sm text-slate-300">Decisão estratégica</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="servicos" class="mx-auto max-w-7xl px-5 py-20 lg:px-8 lg:py-28">
+      <div class="max-w-2xl"><p class="text-sm font-bold uppercase tracking-[.2em] text-turquoise">Serviços &amp; soluções</p><h2 class="mt-4 text-3xl font-semibold text-white sm:text-4xl">Dados preparados para <span class="text-gradient">gerar valor.</span></h2><p class="mt-4 leading-7 text-slate-400">Uma estrutura analítica conectada, confiável e desenhada para os objetivos da sua operação.</p></div>
+      <div class="mt-10 grid gap-5 md:grid-cols-3">
+        <article class="glass group rounded-2xl p-7 transition duration-300 hover:-translate-y-1 hover:border-cyan/30">
+          <div class="grid h-12 w-12 place-items-center rounded-xl bg-cyan/10 text-cyan"><svg aria-hidden="true" viewBox="0 0 24 24" class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 19V5m0 14h17M8 15v-4m5 4V7m5 8V9" stroke-linecap="round"/><path d="m7 8 5-3 5 2 3-3" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          <h3 class="mt-6 text-xl font-semibold text-white">Dashboards &amp; BI</h3><p class="mt-3 leading-7 text-slate-400">Indicadores e visualizações intuitivas para acompanhar resultados e explorar o que acontece na operação.</p><div class="mt-6 flex gap-2"><span class="rounded-md bg-white/[.06] px-2.5 py-1 text-xs text-slate-300">Spotfire</span><span class="rounded-md bg-white/[.06] px-2.5 py-1 text-xs text-slate-300">Power BI</span></div>
+        </article>
+        <article class="glass group rounded-2xl p-7 transition duration-300 hover:-translate-y-1 hover:border-cyan/30">
+          <div class="grid h-12 w-12 place-items-center rounded-xl bg-turquoise/10 text-turquoise"><svg aria-hidden="true" viewBox="0 0 24 24" class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="1.6"><ellipse cx="12" cy="5" rx="7.5" ry="3"/><path d="M4.5 5v7c0 1.66 3.36 3 7.5 3 1.24 0 2.41-.12 3.43-.34M19.5 5v4M4.5 12v7c0 1.66 3.36 3 7.5 3 1.26 0 2.45-.13 3.48-.35" stroke-linecap="round"/><path d="m15.5 17 2 2 4-4" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          <h3 class="mt-6 text-xl font-semibold text-white">Pipelines de dados</h3><p class="mt-3 leading-7 text-slate-400">Integração, tratamento e automação de processos ETL para dados consistentes, acessíveis e prontos para análise.</p><div class="mt-6 text-sm font-medium text-turquoise">Integração · Qualidade · Automação</div>
+        </article>
+        <article class="glass group rounded-2xl p-7 transition duration-300 hover:-translate-y-1 hover:border-cyan/30">
+          <div class="grid h-12 w-12 place-items-center rounded-xl bg-cyan/10 text-cyan"><svg aria-hidden="true" viewBox="0 0 24 24" class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 3v3m0 12v3M3 12h3m12 0h3M5.64 5.64l2.12 2.12m8.48 8.48 2.12 2.12m0-12.72-2.12 2.12m-8.48 8.48-2.12 2.12"/><circle cx="12" cy="12" r="5"/><path d="M10.5 12.5 12 14l2.5-3" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          <h3 class="mt-6 text-xl font-semibold text-white">Inteligência preditiva</h3><p class="mt-3 leading-7 text-slate-400">Modelos analíticos e recursos de IA para antecipar tendências, identificar padrões e apoiar decisões proativas.</p><div class="mt-6 text-sm font-medium text-cyan">Análise · Previsão · Inteligência artificial</div>
+        </article>
+      </div>
+    </section>
+
+    <section id="cases" class="border-y border-white/[.06] bg-[#101a34]">
+      <div class="mx-auto max-w-7xl px-5 py-20 lg:px-8 lg:py-24">
+        <div class="flex flex-col justify-between gap-5 sm:flex-row sm:items-end"><div><p class="text-sm font-bold uppercase tracking-[.2em] text-turquoise">Cases de sucesso</p><h2 class="mt-4 text-3xl font-semibold text-white sm:text-4xl">Inteligência aplicada <span class="text-gradient">ao mundo real.</span></h2></div><p class="max-w-md leading-7 text-slate-400">Projetos construídos em parceria, com foco nos desafios e resultados que importam para cada organização.</p></div>
+        <div class="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+          <article class="rounded-2xl border border-white/[.08] bg-midnight/55 p-6"><span class="text-xs font-semibold uppercase tracking-[.16em] text-cyan">Energia</span><h3 class="mt-4 text-xl font-semibold text-white">Shell</h3><p class="mt-3 text-sm leading-6 text-slate-400">Análise de dados para apoiar visibilidade operacional e identificação de oportunidades de eficiência.</p></article>
+          <article class="rounded-2xl border border-white/[.08] bg-midnight/55 p-6"><span class="text-xs font-semibold uppercase tracking-[.16em] text-turquoise">Educação</span><h3 class="mt-4 text-xl font-semibold text-white">IesBrazil</h3><p class="mt-3 text-sm leading-6 text-slate-400">Informações organizadas para mapear gargalos e dar suporte a decisões mais bem informadas.</p></article>
+          <article class="rounded-2xl border border-white/[.08] bg-midnight/55 p-6"><span class="text-xs font-semibold uppercase tracking-[.16em] text-cyan">Esporte &amp; lazer</span><h3 class="mt-4 text-xl font-semibold text-white">Itacoatiara Pampo Clube</h3><p class="mt-3 text-sm leading-6 text-slate-400">Apoio ao planejamento estratégico e à compreensão de indicadores para evolução contínua.</p></article>
+          <article class="rounded-2xl border border-white/[.08] bg-midnight/55 p-6"><span class="text-xs font-semibold uppercase tracking-[.16em] text-turquoise">Gestão condominial</span><h3 class="mt-4 text-xl font-semibold text-white">Condomínio UBA</h3><p class="mt-3 text-sm leading-6 text-slate-400">Dados e análises para orientar o planejamento, acompanhar custos e melhorar a eficiência.</p></article>
+        </div>
+        <p class="mt-5 text-xs leading-5 text-slate-500">Os exemplos descrevem frentes de trabalho; resultados e indicadores específicos dependem do escopo e dos dados de cada projeto.</p>
+      </div>
+    </section>
+
+    <section id="simulador" class="relative overflow-hidden">
+      <div class="orb pointer-events-none absolute -left-64 top-0 h-[36rem] w-[48rem]"></div>
+      <div class="relative mx-auto grid max-w-7xl gap-12 px-5 py-20 lg:grid-cols-2 lg:items-center lg:px-8 lg:py-28">
+        <div><p class="text-sm font-bold uppercase tracking-[.2em] text-turquoise">Simulador de ROI &amp; eficiência</p><h2 class="mt-4 text-3xl font-semibold leading-tight text-white sm:text-4xl">Quanto tempo sua equipe pode recuperar?</h2><p class="mt-5 max-w-lg leading-7 text-slate-400">Estime o potencial de automação das tarefas manuais de relatórios. Ajuste os campos e veja uma projeção mensal imediata.</p><p class="mt-5 flex items-center gap-2 text-sm text-slate-500"><span class="text-cyan">ⓘ</span> Simulação ilustrativa, baseada em uma estimativa de 70% de redução do esforço manual.</p></div>
+        <div class="glass glow rounded-3xl p-6 sm:p-8">
+          <div class="grid gap-6 sm:grid-cols-2">
+            <label class="block text-sm font-medium text-slate-300" for="reports">Relatórios manuais por mês
+              <input id="reports" type="number" inputmode="numeric" min="0" max="10000" value="40" class="mt-2 w-full rounded-xl border border-white/10 bg-midnight px-4 py-3 text-lg text-white outline-none transition focus:border-cyan focus:ring-2 focus:ring-cyan/20">
+            </label>
+            <label class="block text-sm font-medium text-slate-300" for="minutes">Tempo por relatório (minutos)
+              <input id="minutes" type="number" inputmode="numeric" min="1" max="10000" value="90" class="mt-2 w-full rounded-xl border border-white/10 bg-midnight px-4 py-3 text-lg text-white outline-none transition focus:border-cyan focus:ring-2 focus:ring-cyan/20">
+            </label>
+          </div>
+          <div class="mt-7 rounded-2xl border border-turquoise/20 bg-turquoise/[.06] p-5 sm:p-6" aria-live="polite">
+            <p class="text-sm font-medium text-slate-300">Potencial de tempo recuperado por mês</p>
+            <p class="mt-2 flex items-baseline gap-2"><output id="hours-saved" class="text-5xl font-semibold tracking-tight text-turquoise">42</output><span class="text-lg text-slate-300">horas</span></p>
+            <div class="mt-5 flex items-center justify-between border-t border-white/10 pt-4 text-sm"><span class="text-slate-400">Esforço manual estimado</span><span id="hours-current" class="font-semibold text-white">60 h/mês</span></div>
+            <div class="mt-3 flex items-center justify-between text-sm"><span class="text-slate-400">Produtividade potencial liberada</span><span id="productivity" class="font-semibold text-cyan">70%</span></div>
+          </div>
+          <p id="simulator-error" class="mt-3 hidden text-sm text-rose-300" role="alert">Informe valores válidos para calcular a estimativa.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="px-5 pb-20 lg:px-8 lg:pb-28">
+      <div class="mx-auto flex max-w-7xl flex-col gap-7 rounded-3xl border border-cyan/15 bg-gradient-to-br from-[#172b48] to-[#102039] px-7 py-10 sm:px-10 lg:flex-row lg:items-center lg:justify-between">
+        <div><p class="text-sm font-bold uppercase tracking-[.18em] text-turquoise">Próximo passo</p><h2 class="mt-3 text-2xl font-semibold text-white sm:text-3xl">Vamos descobrir o potencial dos seus dados?</h2><p class="mt-3 text-slate-400">Converse com um consultor e encontre o melhor caminho para sua empresa.</p></div>
+        <a href="https://wa.me/5521966606909?text=Ol%C3%A1%2C%20quero%20conversar%20sobre%20uma%20solu%C3%A7%C3%A3o%20de%20dados." target="_blank" rel="noopener noreferrer" class="inline-flex shrink-0 items-center justify-center gap-2 rounded-xl bg-turquoise px-6 py-3.5 font-bold text-midnight transition hover:bg-cyan">Falar com consultor <span aria-hidden="true">↗</span></a>
+      </div>
+    </section>
+  </main>
+
+  <footer id="contato" class="border-t border-white/[.08] bg-[#080f23]">
+    <div class="mx-auto max-w-7xl px-5 py-12 lg:px-8">
+      <div class="grid gap-10 sm:grid-cols-2 lg:grid-cols-[1.3fr_1fr_1fr]">
+        <div><a class="inline-flex items-center gap-3" href="#inicio"><span class="grid h-10 w-10 place-items-center rounded-xl border border-cyan/30 bg-cyan/10 text-cyan"><svg aria-hidden="true" viewBox="0 0 40 40" class="h-7 w-7" fill="none"><path d="M12 26.5h16a6 6 0 0 0 .5-12A9 9 0 0 0 11.1 17 4.8 4.8 0 0 0 12 26.5Z" stroke="currentColor" stroke-width="1.7"/><path d="M16 22v-3m4 3v-6m4 6v-3m-8 6h8" stroke="#45E0C0" stroke-width="1.7" stroke-linecap="round"/></svg></span><span class="leading-tight"><span class="brand block text-sm font-bold text-white">TJDH_Milanez</span><span class="text-[10px] font-semibold tracking-[.22em] text-cyan">ANALYTIXAI</span></span></a><p class="mt-4 max-w-sm text-sm leading-6 text-slate-400">Consultoria em análise de dados, Business Intelligence e inteligência artificial.</p></div>
+        <div><h2 class="text-sm font-semibold text-white">Fale com a gente</h2><ul class="mt-4 space-y-3 text-sm text-slate-400"><li><a class="transition hover:text-cyan" href="mailto:tjdhmilanez.dataai@gmail.com">tjdhmilanez.dataai@gmail.com</a></li><li><a class="transition hover:text-cyan" href="https://wa.me/5521966606909" target="_blank" rel="noopener noreferrer">WhatsApp: (21) 96660-6909</a></li><li><a class="transition hover:text-cyan" href="https://instagram.com/tjdhmilanez" target="_blank" rel="noopener noreferrer">Instagram: @tjdhmilanez</a></li></ul></div>
+        <div><h2 class="text-sm font-semibold text-white">Privacidade &amp; confiança</h2><p class="mt-4 text-sm leading-6 text-slate-400">Respeito à LGPD e compromisso com a segurança, confidencialidade e uso responsável dos dados em cada projeto.</p></div>
+      </div>
+      <div class="mt-10 flex flex-col gap-3 border-t border-white/[.08] pt-6 text-xs text-slate-500 sm:flex-row sm:items-center sm:justify-between"><p>© <span id="year">2026</span> TJDH_Milanez ANALYTIXAI. Todos os direitos reservados.</p><a class="transition hover:text-cyan" href="mailto:tjdhmilanez.dataai@gmail.com?subject=Privacidade%20e%20prote%C3%A7%C3%A3o%20de%20dados">Dúvidas sobre privacidade? Fale conosco.</a></div>
+    </div>
+  </footer>
+  <script>
+    const menuToggle = document.getElementById("menu-toggle");
+    const mainMenu = document.getElementById("main-menu");
+    menuToggle.addEventListener("click", () => {
+      const isExpanded = menuToggle.getAttribute("aria-expanded") === "true";
+      menuToggle.setAttribute("aria-expanded", String(!isExpanded));
+      menuToggle.setAttribute("aria-label", isExpanded ? "Abrir menu" : "Fechar menu");
+      mainMenu.classList.toggle("hidden", isExpanded);
+    });
+    document.querySelectorAll(".menu-link").forEach((link) => link.addEventListener("click", () => {
+      mainMenu.classList.add("hidden");
+      menuToggle.setAttribute("aria-expanded", "false");
+      menuToggle.setAttribute("aria-label", "Abrir menu");
+    }));
+
+    const reportsInput = document.getElementById("reports");
+    const minutesInput = document.getElementById("minutes");
+    const hoursSaved = document.getElementById("hours-saved");
+    const hoursCurrent = document.getElementById("hours-current");
+    const productivity = document.getElementById("productivity");
+    const simulatorError = document.getElementById("simulator-error");
+    const formatter = new Intl.NumberFormat("pt-BR", { maximumFractionDigits: 1 });
+    function updateEstimate() {
+      const reports = Number(reportsInput.value);
+      const minutes = Number(minutesInput.value);
+      const valid = Number.isFinite(reports) && Number.isFinite(minutes)
+        && reports >= 0 && reports <= 10000 && minutes >= 1 && minutes <= 10000;
+      simulatorError.classList.toggle("hidden", valid);
+      if (!valid) {
+        hoursSaved.textContent = "—";
+        hoursCurrent.textContent = "—";
+        productivity.textContent = "—";
+        return;
+      }
+      const manualHours = reports * minutes / 60;
+      hoursCurrent.textContent = `${formatter.format(manualHours)} h/mês`;
+      hoursSaved.textContent = formatter.format(manualHours * 0.7);
+      productivity.textContent = "70%";
+    }
+    reportsInput.addEventListener("input", updateEstimate);
+    minutesInput.addEventListener("input", updateEstimate);
+    document.getElementById("year").textContent = new Date().getFullYear();
+    updateEstimate();
+  </script>
+</body>
+</html>
