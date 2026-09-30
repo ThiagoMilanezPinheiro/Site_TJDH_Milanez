@@ -55,6 +55,10 @@ function setupMobileMenu() {
 }
 
 function setupContactForm() {
+    const form = $('#contact-form');
+    form.setAttribute('name', 'contact');
+    form.setAttribute('data-netlify', 'true');
+    form.setAttribute('netlify-honeypot', 'bot-field');
     $('#contact-form').addEventListener('submit', async (event) => {
         event.preventDefault();
         const form = event.currentTarget;
@@ -64,7 +68,7 @@ function setupContactForm() {
         try {
             const payload = new FormData(form);
             payload.set('form-name', 'contact');
-            const response = await fetch('/', { method: 'POST', headers: { 'Content-Type': 'application/x-www-form-urlencoded' }, body: new URLSearchParams(payload).toString() });
+            const response = await fetch(window.location.pathname, { method: 'POST', headers: { 'Content-Type': 'application/x-www-form-urlencoded' }, body: new URLSearchParams(payload).toString() });
             if (!response.ok) throw new Error('Form submission failed');
             form.reset();
             success.textContent = 'Solicitação recebida com sucesso. Retornaremos o contato em até 2 horas úteis.';
