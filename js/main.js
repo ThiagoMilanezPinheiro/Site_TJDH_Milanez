@@ -71,7 +71,7 @@ function setupContactForm() {
             const response = await fetch(window.location.pathname, { method: 'POST', headers: { 'Content-Type': 'application/x-www-form-urlencoded' }, body: new URLSearchParams(payload).toString() });
             if (!response.ok) throw new Error('Form submission failed');
             form.reset();
-            success.textContent = 'Solicitação recebida com sucesso. Retornaremos o contato em até 2 horas úteis.';
+            success.textContent = 'Solicitação recebida com sucesso. Retornaremos o contato em até 2 dias úteis.';
             success.hidden = false;
             window.setTimeout(() => { success.hidden = true; }, 5000);
         } catch (error) {
