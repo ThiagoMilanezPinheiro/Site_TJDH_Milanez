@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>TJDH_Milanez ANALYTIXAI | Dados, BI e Inteligência Artificial</title>
+<meta name="description" content="Consultoria em Análise de Dados, Business Intelligence e Inteligência Artificial.">
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+tailwind.config = { theme: { extend: {
+  colors: { navy: '#0B132B', navy2: '#1C2541', cyan2: '#00E5FF', teal2: '#1DE9B6' },
+  fontFamily: { sans: ['Inter', 'system-ui', 'sans-serif'] } } } }
+</script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  html { scroll-behavior: smooth; }
+  .grad-text { background: linear-gradient(90deg,#00E5FF,#1DE9B6); -webkit-background-clip: text; background-clip: text; color: transparent; }
+  .glow { box-shadow: 0 0 30px rgba(0,229,255,.25); }
+  .card { background: rgba(28,37,65,.7); border: 1px solid rgba(0,229,255,.15); transition: all .3s; }
+  .card:hover { transform: translateY(-6px); border-color: rgba(0,229,255,.6); box-shadow: 0 10px 40px rgba(0,229,255,.15); }
+  .reveal { opacity: 0; transform: translateY(24px); transition: all .7s ease; }
+  .reveal.show { opacity: 1; transform: none; }
+  .dash { stroke-dasharray: 6 6; animation: dash 2s linear infinite; }
+  @keyframes dash { to { stroke-dashoffset: -24; } }
+  .float { animation: float 5s ease-in-out infinite; }
+  @keyframes float { 50% { transform: translateY(-12px); } }
+  input[type=range] { accent-color: #00E5FF; }
+</style>
+</head>
+<body class="bg-navy text-gray-200 font-sans antialiased">
+
+<header class="fixed top-0 inset-x-0 z-50 bg-navy/85 backdrop-blur border-b border-cyan2/10">
+  <div class="max-w-7xl mx-auto px-4 h-16 flex items-center justify-between">
+    <a href="#inicio" class="flex items-center gap-2">
+      <svg width="34" height="34" viewBox="0 0 64 64" aria-hidden="true"><defs><linearGradient id="lg" x1="0" x2="1"><stop offset="0" stop-color="#00E5FF"/><stop offset="1" stop-color="#1DE9B6"/></linearGradient></defs>
+        <path d="M18 44a10 10 0 0 1-1-20 14 14 0 0 1 27-3 11 11 0 0 1 2 23z" fill="none" stroke="url(#lg)" stroke-width="3"/>
+        <path d="M24 44v-8h8m8 8V32m-8 12v6" stroke="url(#lg)" stroke-width="2.5" fill="none"/><circle cx="32" cy="36" r="2.5" fill="#00E5FF"/><circle cx="40" cy="32" r="2.5" fill="#1DE9B6"/></svg>
+      <span class="font-bold text-white leading-tight">TJDH_Milanez <span class="grad-text block text-xs tracking-widest">ANALYTIXAI</span></span>
+    </a>
+    <nav class="hidden lg:flex gap-6 text-sm">
+      <a class="hover:text-cyan2" href="#inicio">Início</a>
+      <a class="hover:text-cyan2" href="#sobre">Sobre</a>
+      <a class="hover:text-cyan2" href="#servicos">Serviços</a>
+      <a class="hover:text-cyan2" href="#cases">Cases de Sucesso</a>
+      <a class="hover:text-cyan2" href="#roi">Simulador de ROI</a>
+      <a class="hover:text-cyan2" href="#contato">Contato</a>
+    </nav>
+    <div class="flex items-center gap-3">
+      <a href="https://wa.me/5521966606909" target="_blank" rel="noopener" class="hidden sm:inline-block px-4 py-2 rounded-lg text-sm font-semibold text-navy bg-gradient-to-r from-cyan2 to-teal2 hover:opacity-90">Falar com Consultor</a>
+      <button id="menuBtn" class="lg:hidden p-2 text-cyan2" aria-label="Abrir menu" aria-expanded="false">
+        <svg width="26" height="26" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h20M3 13h20M3 20h20"/></svg>
+      </button>
+    </div>
+  </div>
+  <div id="mobileMenu" class="hidden lg:hidden bg-navy2 border-t border-cyan2/10 px-4 py-3 space-y-3 text-sm">
+    <a class="block" href="#inicio">Início</a><a class="block" href="#sobre">Sobre</a>
+    <a class="block" href="#servicos">Serviços</a><a class="block" href="#cases">Cases de Sucesso</a>
+    <a class="block" href="#roi">Simulador de ROI</a><a class="block" href="#contato">Contato</a>
+    <a href="https://wa.me/5521966606909" target="_blank" rel="noopener" class="block text-center px-4 py-2 rounded-lg font-semibold text-navy bg-gradient-to-r from-cyan2 to-teal2">Falar com Consultor</a>
+  </div>
+</header>
+
+<main>
+<section id="inicio" class="relative pt-32 pb-24 overflow-hidden bg-gradient-to-b from-navy to-navy2">
+  <div class="absolute -top-20 -right-20 w-96 h-96 bg-cyan2/10 rounded-full blur-3xl"></div>
+  <div class="absolute bottom-0 -left-20 w-96 h-96 bg-teal2/10 rounded-full blur-3xl"></div>
+  <div class="relative max-w-7xl mx-auto px-4 grid lg:grid-cols-2 gap-12 items-center">
+    <div class="reveal">
+      <span class="inline-block mb-4 px-3 py-1 rounded-full text-xs border border-cyan2/40 text-cyan2">Dados • Business Intelligence • IA</span>
+      <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white leading-tight">Transformando <span class="grad-text">Dados em Resultados Reais</span></h1>
+      <p class="mt-6 text-lg text-gray-300 max-w-xl">Business Intelligence, Dashboards interativos e Inteligência Artificial para transformar informação em decisões estratégicas, com mais eficiência e menos custo.</p>
+      <div class="mt-8 flex flex-wrap gap-4">
+        <a href="https://wa.me/5521966606909?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20um%20diagn%C3%B3stico." target="_blank" rel="noopener" class="px-6 py-3 rounded-lg font-semibold text-navy bg-gradient-to-r from-cyan2 to-teal2 glow hover:scale-105 transition">Agendar Diagnóstico Gratuito</a>
+        <a href="#roi" class="px-6 py-3 rounded-lg font-semibold border border-cyan2 text-cyan2 hover:bg-cyan2/10 transition">Simular meu ROI</a>
+      </div>
+    </div>
+    <div class="reveal flex justify-center">
+      <svg class="float w-full max-w-md" viewBox="0 0 400 320" role="img" aria-label="Nuvem de dados com conexões de circuito">
+        <defs><linearGradient id="g2" x1="0" x2="1" y1="0" y2="1"><stop offset="0" stop-color="#00E5FF"/><stop offset="1" stop-color="#1DE9B6"/></linearGradient>
+        <filter id="bl"><feGaussianBlur stdDeviation="6"/></filter></defs>
+        <path d="M110 200a55 55 0 0 1-5-108 75 75 0 0 1 145-15 60 60 0 0 1 15 123z" fill="url(#g2)" opacity=".35" filter="url(#bl)"/>
+        <path d="M110 200a55 55 0 0 1-5-108 75 75 0 0 1 145-15 60 60 0 0 1 15 123z" fill="#1C2541" stroke="url(#g2)" stroke-width="4"/>
+        <g stroke="url(#g2)" stroke-width="2.5" fill="none" class="dash">
+          <path d="M140 200v50h-60M200 200v80M260 200v40h70M320 250h40"/></g>
+        <g fill="#00E5FF"><circle cx="80" cy="250" r="7"/><circle cx="200" cy="280" r="7"/><circle cx="330" cy="240" r="7"/><circle cx="360" cy="250" r="7" fill="#1DE9B6"/></g>
+        <g stroke="#00E5FF" stroke-width="3" fill="none"><path d="M140 170l30-30 30 20 40-40"/></g>
+        <text x="200" y="118" text-anchor="middle" fill="#fff" font-size="16" font-weight="700">ANALYTIXAI</text>
+      </svg>
+    </div>
+  </div>
+  <div class="relative max-w-5xl mx-auto px-4 mt-16 grid grid-cols-2 md:grid-cols-4 gap-4 text-center reveal">
+    <div class="card rounded-xl p-4"><p class="text-3xl font-bold grad-text">+40%</p><p class="text-sm">Eficiência operacional</p></div>
+    <div class="card rounded-xl p-4"><p class="text-3xl font-bold grad-text">BI</p><p class="text-sm">Spotfire &amp; Power BI</p></div>
+    <div class="card rounded-xl p-4"><p class="text-3xl font-bold grad-text">ETL</p><p class="text-sm">Pipelines automatizados</p></div>
+    <div class="card rounded-xl p-4"><p class="text-3xl font-bold grad-text">IA</p><p class="text-sm">Inteligência preditiva</p></div>
+  </div>
+</section>
+
+<section id="sobre" class="py-24 bg-navy">
+  <div class="max-w-7xl mx-auto px-4 grid md:grid-cols-2 gap-12 items-center">
+    <div class="reveal flex justify-center">
+      <div class="w-64 h-64 rounded-full p-1 bg-gradient-to-br from-cyan2 to-teal2 glow">
+        <div class="w-full h-full rounded-full bg-navy2 flex items-center justify-center text-6xl font-extrabold grad-text">TM</div>
+      </div>
+    </div>
+    <div class="reveal">
+      <h2 class="text-3xl sm:text-4xl font-bold text-white">Sobre <span class="grad-text">Thiago Milanez</span></h2>
+      <p class="mt-5 text-gray-300">Fundador da TJDH_Milanez Consultoria, Thiago Milanez atua com engenharia de dados, automação de processos e análise avançada, apoiando organizações a organizar suas informações e tomar decisões estratégicas baseadas em evidências.</p>
+      <ul class="mt-6 space-y-3">
+        <li class="flex gap-3"><span class="text-teal2">✔</span> Engenharia de dados: coleta, tratamento e modelagem confiáveis.</li>
+        <li class="flex gap-3"><span class="text-teal2">✔</span> Automação: elimine tarefas manuais e retrabalho.</li>
+        <li class="flex gap-3"><span class="text-teal2">✔</span> Decisão estratégica: indicadores claros para gestores.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section id="servicos" class="py-24 bg-navy2">
+  <div class="max-w-7xl mx-auto px-4">
+    <div class="text-center reveal"><h2 class="text-3xl sm:text-4xl font-bold text-white">Serviços &amp; <span class="grad-text">Soluções</span></h2>
+    <p class="mt-3 text-gray-400">Clique em um card para ver os detalhes.</p></div>
+    <div class="mt-12 grid md:grid-cols-3 gap-6">
+      <button class="card svc reveal rounded-2xl p-6 text-left" aria-expanded="false">
+        <div class="text-4xl">📊</div><h3 class="mt-4 text-xl font-semibold text-white">Dashboards</h3>
+        <p class="mt-2 text-sm text-gray-300">Spotfire e Power BI para visão em tempo real do negócio.</p>
+        <p class="more hidden mt-3 text-sm text-cyan2">Painéis executivos e operacionais, KPIs, drill-down, atualização automática e treinamento das equipes.</p>
+        <span class="mt-4 inline-block text-xs text-teal2">Saiba mais ＋</span></button>
+      <button class="card svc reveal rounded-2xl p-6 text-left" aria-expanded="false">
+        <div class="text-4xl">🔄</div><h3 class="mt-4 text-xl font-semibold text-white">Pipelines de Dados (ETL)</h3>
+        <p class="mt-2 text-sm text-gray-300">Extração, transformação e carga automatizadas.</p>
+        <p class="more hidden mt-3 text-sm text-cyan2">Integração de planilhas, ERPs, APIs e bancos de dados em uma base única, confiável e auditável.</p>
+        <span class="mt-4 inline-block text-xs text-teal2">Saiba mais ＋</span></button>
+      <button class="card svc reveal rounded-2xl p-6 text-left" aria-expanded="false">
+        <div class="text-4xl">🤖</div><h3 class="mt-4 text-xl font-semibold text-white">Inteligência Preditiva</h3>
+        <p class="mt-2 text-sm text-gray-300">Modelos de IA para antecipar cenários e riscos.</p>
+        <p class="more hidden mt-3 text-sm text-cyan2">Previsão de demanda, detecção de anomalias, análise de tendências e apoio ao planejamento estratégico.</p>
+        <span class="mt-4 inline-block text-xs text-teal2">Saiba mais ＋</span></button>
+    </div>
+  </div>
+</section>
+
+<section id="cases" class="py-24 bg-navy">
+  <div class="max-w-7xl mx-auto px-4">
+    <div class="text-center reveal"><h2 class="text-3xl sm:text-4xl font-bold text-white">Cases de <span class="grad-text">Sucesso</span></h2></div>
+    <div class="mt-12 grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      <div class="card reveal rounded-2xl p-6"><p class="text-teal2 font-bold text-lg">Shell</p><p class="text-xs text-cyan2 mt-1">Redução de custos</p><p class="mt-3 text-sm text-gray-300">Análise de dados operacionais que identificou desperdícios e reduziu custos.</p></div>
+      <div class="card reveal rounded-2xl p-6"><p class="text-teal2 font-bold text-lg">IesBrazil</p><p class="text-xs text-cyan2 mt-1">Mapeamento de gargalos</p><p class="mt-3 text-sm text-gray-300">Mapeamento de processos e gargalos com indicadores claros para a gestão.</p></div>
+      <div class="card reveal rounded-2xl p-6"><p class="text-teal2 font-bold text-lg">Itacoatiara Pampo Clube</p><p class="text-xs text-cyan2 mt-1">Aumento de eficiência</p><p class="mt-3 text-sm text-gray-300">Automação e dashboards que aumentaram a eficiência administrativa.</p></div>
+      <div class="card reveal rounded-2xl p-6"><p class="text-teal2 font-bold text-lg">Condomínio UBA</p><p class="text-xs text-cyan2 mt-1">Planejamento estratégico</p><p class="mt-3 text-sm text-gray-300">Dados financeiros organizados para planejamento e transparência.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="roi" class="py-24 bg-navy2">
+  <div class="max-w-4xl mx-auto px-4">
+    <div class="text-center reveal"><h2 class="text-3xl sm:text-4xl font-bold text-white">Simulador de <span class="grad-text">ROI / Eficiência</span></h2>
+    <p class="mt-3 text-gray-400">Estimativa ilustrativa; o resultado real depende do diagnóstico.</p></div>
+    <form id="roiForm" class="mt-10 card rounded-2xl p-6 sm:p-8 grid gap-6 reveal" onsubmit="return false">
+      <div><label for="reports" class="flex justify-between text-sm">Relatórios manuais por mês <b id="reportsV" class="text-cyan2">20</b></label>
+        <input id="reports" type="range" min="1" max="200" value="20" class="w-full mt-2"></div>
+      <div><label for="hours" class="flex justify-between text-sm">Horas gastas por relatório <b id="hoursV" class="text-cyan2">3</b></label>
+        <input id="hours" type="range" min="0.5" max="20" step="0.5" value="3" class="w-full mt-2"></div>
+      <div><label for="cost" class="flex justify-between text-sm">Custo médio da hora (R$) <b id="costV" class="text-cyan2">50</b></label>
+        <input id="cost" type="range" min="10" max="300" step="5" value="50" class="w-full mt-2"></div>
+      <div><label for="vol" class="text-sm">Volume de dados</label>
+        <select id="vol" class="w-full mt-2 bg-navy border border-cyan2/30 rounded-lg p-2">
+          <option value="0.6">Pequeno (planilhas)</option><option value="0.75" selected>Médio (várias fontes)</option><option value="0.85">Grande (ERP / bancos)</option></select></div>
+      <div class="grid sm:grid-cols-3 gap-4 text-center">
+        <div class="bg-navy rounded-xl p-4"><p class="text-xs">Horas economizadas/mês</p><p id="outH" class="text-2xl font-bold grad-text">0</p></div>
+        <div class="bg-navy rounded-xl p-4"><p class="text-xs">Economia mensal</p><p id="outM" class="text-2xl font-bold grad-text">R$ 0</p></div>
+        <div class="bg-navy rounded-xl p-4"><p class="text-xs">Economia anual</p><p id="outY" class="text-2xl font-bold grad-text">R$ 0</p></div>
+      </div>
+      <div><p class="text-sm mb-1">Ganho de produtividade: <b id="outP" class="text-teal2">0%</b></p>
+        <div class="h-3 bg-navy rounded-full overflow-hidden"><div id="bar" class="h-full bg-gradient-to-r from-cyan2 to-teal2 transition-all duration-500" style="width:0"></div></div></div>
+      <a id="roiCta" href="https://wa.me/5521966606909" target="_blank" rel="noopener" class="text-center px-6 py-3 rounded-lg font-semibold text-navy bg-gradient-to-r from-cyan2 to-teal2">Quero esse resultado</a>
+    </form>
+  </div>
+</section>
+</main>
+
+<footer id="contato" class="bg-navy border-t border-cyan2/20 pt-16 pb-8">
+  <div class="max-w-7xl mx-auto px-4 grid md:grid-cols-3 gap-10">
+    <div><p class="font-bold text-white text-lg">TJDH_Milanez <span class="grad-text">ANALYTIXAI</span></p>
+      <p class="mt-3 text-sm text-gray-400">Consultoria em Análise de Dados, Business Intelligence e Inteligência Artificial.</p></div>
+    <div><h3 class="font-semibold text-white">Contato</h3>
+      <ul class="mt-3 space-y-2 text-sm">
+        <li>✉ <a class="hover:text-cyan2" href="mailto:tjdhmilanez.dataai@gmail.com">tjdhmilanez.dataai@gmail.com</a></li>
+        <li>📱 <a class="hover:text-cyan2" href="https://wa.me/5521966606909" target="_blank" rel="noopener">WhatsApp: 21 96660-6909</a></li>
+        <li>📷 <a class="hover:text-cyan2" href="https://instagram.com/tjdhmilanez" target="_blank" rel="noopener">@tjdhmilanez</a></li></ul></div>
+    <div><h3 class="font-semibold text-white">Privacidade &amp; Segurança</h3>
+      <p class="mt-3 text-sm text-gray-400">Em conformidade com a Lei Geral de Proteção de Dados (LGPD – Lei 13.709/2018). Dados de clientes são tratados com confidencialidade, acesso restrito, criptografia e finalidade específica.</p></div>
+  </div>
+  <p class="mt-12 text-center text-xs text-gray-500">© <span id="year"></span> TJDH_Milanez Consultoria. Todos os direitos reservados.</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
