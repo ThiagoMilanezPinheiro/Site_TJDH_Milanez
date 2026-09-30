@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="TJDH_Milanez: consultoria estratégica em BI, Analytics e Inteligência Artificial.">
+    <title>TJDH_Milanez | Analytics, BI & AI Solutions</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <canvas id="particle-canvas" aria-hidden="true"></canvas>
+
+    <header class="site-header">
+        <div class="container header-inner">
+            <a href="#home" class="brand" aria-label="TJDH Milanez início">
+                <span class="brand-mark"><i class="fa-solid fa-cloud"></i></span>
+                <span><strong>TJDH_MILANEZ</strong><small>ANALYTIXAI CONSULTORIA</small></span>
+            </a>
+            <nav class="desktop-nav" aria-label="Navegação principal">
+                <a href="#home">Início</a><a href="#impacto">Resultados</a><a href="#clientes">Cases</a>
+                <a href="#servicos">Serviços</a><a href="#calculadora">Simulador ROI</a><a href="#seguranca">Segurança</a>
+            </nav>
+            <button class="button primary header-cta" data-contact>Diagnóstico Gratuito <i class="fa-solid fa-arrow-right"></i></button>
+            <button id="mobile-menu-btn" class="icon-button mobile-only" aria-label="Abrir menu" aria-expanded="false"><i class="fa-solid fa-bars"></i></button>
+        </div>
+        <nav id="mobile-menu" class="mobile-nav" aria-label="Navegação móvel" hidden>
+            <a href="#home">Início</a><a href="#impacto">Resultados</a><a href="#clientes">Cases</a><a href="#servicos">Serviços</a><a href="#calculadora">Simulador ROI</a><a href="#seguranca">Segurança</a>
+            <button class="button primary" data-contact>Solicitar Diagnóstico Gratuito</button>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home" class="hero section-grid">
+            <div class="container hero-layout">
+                <div class="hero-copy reveal">
+                    <span class="eyebrow"><i class="fa-solid fa-circle pulse"></i> Consultoria Estratégica em BI, Analytics & AI</span>
+                    <h1>Transforme Dados Brutos em <span class="gradient-text">Decisões Estratégicas</span> e Resultados Reais.</h1>
+                    <p class="lead">Unimos inteligência de dados, dashboards de alta performance em Spotfire, Power BI e Python, e Inteligência Artificial para gerar previsibilidade, mitigar riscos e otimizar processos.</p>
+                    <div class="hero-actions"><button class="button primary large" data-contact>Falar com um Consultor <i class="fa-solid fa-comments"></i></button><a class="button secondary large" href="#clientes">Ver Cases de Sucesso</a></div>
+                    <div class="trust-metrics"><div><strong>+R$ 15M</strong><span>Economia otimizada</span></div><div><strong>99.8%</strong><span>Precisão de pipeline</span></div><div><strong>100%</strong><span>Conformidade LGPD</span></div></div>
+                </div>
+                <div class="dashboard glass-card reveal">
+                    <div class="window-bar"><span><i></i><i></i><i></i></span><code>live_bi_analytics.py</code><b>LIVE DATA STREAM</b></div>
+                    <div class="stat-grid"><div><span>Eficiência operacional</span><strong id="stat-efficiency">+38.4%</strong><em>↑ 4.2%</em></div><div><span>Custos reduzidos</span><strong class="cyan" id="stat-savings">R$ 284.500</strong><em>↓ -18%</em></div></div>
+                    <div class="chart-wrap"><canvas id="heroLiveChart" aria-label="Gráfico de produtividade"></canvas></div>
+                    <div class="dashboard-footer"><span><i class="fa-solid fa-bolt"></i> Spotfire + AI Engine</span><button id="chart-update">Simular Pico <i class="fa-solid fa-rotate"></i></button></div>
+                </div>
+            </div>
+        </section>
+
+        <section id="impacto" class="section band"><div class="container"><div class="section-heading"><span class="eyebrow">Resultados mensuráveis</span><h2>Transformando desafios operacionais em alta performance</h2><p>Metodologias de BI e inteligência de dados com impacto direto na saúde financeira da sua organização.</p></div><div class="card-grid four">
+            <article class="glass-card feature-card"><i class="fa-solid fa-piggy-bank icon emerald"></i><h3>Redução de Custos</h3><p>Mapeamos anomalias orçamentárias, redundâncias e custos ocultos na cadeia produtiva.</p></article>
+            <article class="glass-card feature-card"><i class="fa-solid fa-magnifying-glass-chart icon cyan"></i><h3>Identificação de Gargalos</h3><p>Visualização clara de travamentos em fluxos de trabalho para correções imediatas.</p></article>
+            <article class="glass-card feature-card"><i class="fa-solid fa-chart-line icon blue"></i><h3>Aumento da Produção</h3><p>Otimização de recursos e tempo por meio da automação de relatórios e indicadores.</p></article>
+            <article class="glass-card feature-card"><i class="fa-solid fa-chess-knight icon violet"></i><h3>Planejamento do Futuro</h3><p>Modelos preditivos em Python e AI para antecipar demandas e oportunidades.</p></article>
+        </div></div></section>
+
+        <section id="clientes" class="section"><div class="container"><div class="section-heading"><span class="eyebrow">Prova social & cases</span><h2>Empresas e instituições que confiam no nosso trabalho</h2><p>Soluções personalizadas para indústria, inovação, gestão esportiva e condomínios.</p></div><div class="client-grid" id="client-grid"></div><div class="case-display glass-card"><div class="case-head"><div><span id="case-category" class="tag">Case em destaque</span><h3 id="case-title"></h3></div><div class="case-controls"><button class="icon-button" id="case-prev" aria-label="Case anterior"><i class="fa-solid fa-chevron-left"></i></button><button class="icon-button" id="case-next" aria-label="Próximo case"><i class="fa-solid fa-chevron-right"></i></button></div></div><div class="case-body"><div><h4>O desafio & a solução TJDH_Milanez</h4><p id="case-description"></p><h4>Pilares de atuação</h4><div id="case-highlights" class="tags"></div></div><div class="case-metrics"><span>Indicador principal<strong id="case-metric-1"></strong></span><span>Eficiência gerencial<strong id="case-metric-2"></strong></span></div></div></div></div></section>
+
+        <section id="servicos" class="section band"><div class="container"><div class="section-heading"><span class="eyebrow">Especialidades & soluções</span><h2>Tecnologia avançada para a sua empresa</h2><p>Inteligência analítica combinada às ferramentas mais modernas do mercado.</p></div><div class="card-grid three"><article class="glass-card service-card"><i class="fa-solid fa-chart-pie icon cyan"></i><h3>Dashboards Interativos & BI</h3><p>Painéis gerenciais personalizados em Spotfire, Power BI e Python, com filtros dinâmicos e exportação facilitada.</p><ul><li>Tibco Spotfire / Power BI</li><li>Atualizações automatizadas</li><li>Interface executiva</li></ul></article><article class="glass-card service-card"><i class="fa-solid fa-diagram-project icon blue"></i><h3>Integradores & Pipelines</h3><p>Arquiteturas robustas de ETL para limpeza e unificação de SQL, ERPs, APIs e planilhas.</p><ul><li>Python & SQL scripting</li><li>Data warehouse na nuvem</li><li>Mapeamento sem desperdício</li></ul></article><article class="glass-card service-card"><i class="fa-solid fa-brain icon violet"></i><h3>Inteligência Artificial & Preditiva</h3><p>Machine Learning e IA generativa para previsão de vendas, demanda e comportamento de clientes.</p><ul><li>Modelos preditivos</li><li>Análise de sentimento & churn</li><li>Integração com LLMs</li></ul></article></div></div></section>
+
+        <section id="calculadora" class="section"><div class="container narrow"><div class="roi glass-card"><div class="section-heading"><span class="eyebrow">Simulador interativo</span><h2>Estime o retorno de investimento da sua empresa</h2><p>Veja quanto tempo e recurso financeiro sua equipe pode economizar com BI estratégico.</p></div><div class="roi-layout"><div class="controls"><label>Pessoas dedicadas a relatórios: <output id="val-team-size">5 pessoas</output><input type="range" id="input-team-size" min="1" max="50" value="5"></label><label>Horas por semana por pessoa: <output id="val-hours">12 horas</output><input type="range" id="input-hours" min="2" max="30" value="12"></label><label>Custo médio por hora (R$): <output id="val-cost">R$ 60 /h</output><input type="range" id="input-cost" min="20" max="250" value="60" step="5"></label></div><div class="roi-output"><span>Economia anual estimada</span><strong id="output-annual-savings">R$ 149.760</strong><small>Considerando automação de 80% das tarefas manuais</small><div class="roi-sub"><span>Horas poupadas / ano<strong id="output-hours-saved">2.496 hrs</strong></span><span>Aumento de eficiência<strong>+400%</strong></span></div><button class="button primary" data-contact>Solicitar proposta customizada</button></div></div></div></div></section>
+
+        <section id="seguranca" class="section band"><div class="container security-layout"><div><span class="eyebrow"><i class="fa-solid fa-shield-halved"></i> Governança & privacidade total</span><h2>Seus dados protegidos sob rigorosos padrões globais</h2><p>Implementamos políticas de confidencialidade, conformidade com a LGPD e criptografia em todas as etapas da consultoria.</p><div class="security-list"><div><i class="fa-solid fa-lock icon emerald"></i><span><b>Conformidade LGPD & GDPR</b>Mapeamento de dados pessoais e anonimização de bases sensíveis.</span></div><div><i class="fa-solid fa-key icon cyan"></i><span><b>Criptografia & NDAs</b>Termos de confidencialidade antes do acesso a qualquer ambiente.</span></div><div><i class="fa-solid fa-cloud-shield icon blue"></i><span><b>Infraestrutura em nuvem segura</b>Controle de permissão por usuário em AWS, Azure e Render.</span></div></div></div><div class="glass-card vault"><i class="fa-solid fa-vault vault-icon"></i><h3>Protocolo de Confidencialidade TJDH</h3><p>Garantia contratual de sigilo absoluto para setores industrial, corporativo, financeiro e imobiliário.</p><div class="badge-grid"><span><i class="fa-solid fa-file-contract"></i>NDA obrigatório</span><span><i class="fa-solid fa-user-shield"></i>Acesso restrito</span><span><i class="fa-solid fa-database"></i>ISO/IEC 27001</span></div></div></div></section>
+
+        <section id="contacto" class="section section-grid"><div class="container contact-layout"><div><span class="eyebrow">Fale conosco</span><h2>Agende seu diagnóstico de dados</h2><p>Entre em contato diretamente com o especialista Thiago Milanez para analisar a maturidade dos dados da sua empresa.</p><div class="contact-links"><a href="mailto:tjdhmilanez.dataai@gmail.com"><i class="fa-solid fa-envelope"></i><span>E-mail comercial<b>tjdhmilanez.dataai@gmail.com</b></span></a><a href="https://wa.me/5521966606909" target="_blank" rel="noreferrer"><i class="fa-brands fa-whatsapp"></i><span>WhatsApp direto<b>(21) 96660-6909</b></span></a><a href="https://www.instagram.com/tjdhmilanez/" target="_blank" rel="noreferrer"><i class="fa-brands fa-instagram"></i><span>Instagram oficial<b>@tjdhmilanez</b></span></a></div></div><form id="contact-form" class="glass-card contact-form"><div class="form-row"><label>Seu nome *<input required name="name" placeholder="Ex: Amanda Silva"></label><label>Empresa / instituição *<input required name="company" placeholder="Ex: Minha Empresa Ltda"></label></div><div class="form-row"><label>E-mail profissional *<input required type="email" name="email" placeholder="amanda@empresa.com"></label><label>Telefone / WhatsApp *<input required name="phone" placeholder="(21) 99999-9999"></label></div><label>Principal objetivo<select name="objective"><option>Criação de dashboards</option><option>Redução de custos e gargalos</option><option>Automação de pipelines</option><option>Modelos preditivos de IA</option><option>Outro desafio personalizado</option></select></label><label>Mensagem<textarea name="message" rows="4" placeholder="Descreva brevemente sua situação atual..."></textarea></label><button class="button primary" type="submit"><i class="fa-solid fa-paper-plane"></i> Enviar solicitação de consultoria</button><p id="form-success" class="success" hidden>Solicitação recebida com sucesso. Retornaremos o contato em até 2 horas úteis.</p></form></div></section>
+    </main>
+
+    <footer><div class="container footer-inner"><span><strong>TJDH_MILANEZ ANALYTIXAI</strong><small>© 2026 TJDH_Milanez Consultoria. Todos os direitos reservados.</small></span><a href="https://wa.me/5521966606909" target="_blank" rel="noreferrer">Suporte WhatsApp</a></div></footer>
+
+    <dialog id="contact-modal"><button class="dialog-close" aria-label="Fechar">×</button><h2>Falar com Thiago Milanez</h2><p>Escolha o canal preferido para iniciar o diagnóstico de dados.</p><a class="button whatsapp" href="https://wa.me/5521966606909?text=Ol%C3%A1%20Thiago,%20gostaria%20de%20solicitar%20um%20diagn%C3%B3stico%20de%20dados." target="_blank" rel="noreferrer"><i class="fa-brands fa-whatsapp"></i> Conversar no WhatsApp</a><a class="button secondary" href="mailto:tjdhmilanez.dataai@gmail.com?subject=Solicitacao%20de%20Consultoria%20TJDH_Milanez"><i class="fa-solid fa-envelope"></i> Enviar e-mail direto</a></dialog>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
