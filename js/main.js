@@ -93,7 +93,7 @@ function setupParticles() {
 }
 
 function initialize() {
-    $('#client-grid').innerHTML = Object.entries(cases).map(([key, item]) => `<button class="client" data-case="${key}">${item.logo ? `<img class="client-logo" src="${item.logo}" alt="Logo ${key === 'iesbrazil' ? 'IesBrazil' : key === 'itacoatiara' ? 'Itacoatiara Pampo Clube' : 'Shell'}">` : `<i class="fa-solid ${item.icon}"></i>`}<b>${key === 'iesbrazil' ? 'IesBrazil' : key === 'itacoatiara' ? 'Itacoatiara Pampo Clube' : key === 'uba' ? 'Condomínio UBA' : 'Shell'}</b><small>${item.category}</small></button>`).join('');
+    $('#client-grid').innerHTML = Object.entries(cases).map(([key, item]) => `<button class="client" data-case="${key}">${item.logo ? `<img class="client-logo${key === 'itacoatiara' ? ' client-logo-pampo' : ''}" src="${item.logo}" alt="Logo ${key === 'iesbrazil' ? 'IesBrazil' : key === 'itacoatiara' ? 'Itacoatiara Pampo Clube' : 'Shell'}">` : `<i class="fa-solid ${item.icon}"></i>`}<b>${key === 'iesbrazil' ? 'IesBrazil' : key === 'itacoatiara' ? 'Itacoatiara Pampo Clube' : key === 'uba' ? 'Condomínio UBA' : 'Shell'}</b><small>${item.category}</small></button>`).join('');
     $$('.client').forEach((client) => client.addEventListener('click', () => renderCase(caseKeys.indexOf(client.dataset.case))));
     $('#case-prev').addEventListener('click', () => renderCase(currentCase - 1));
     $('#case-next').addEventListener('click', () => renderCase(currentCase + 1));

@@ -6,3 +6,11 @@
     border-radius: 4px;
     object-fit: contain;
 }
+
+.client-logo-pampo {
+    width: 154px;
+    height: 55px;
+    margin-inline: auto;
+    object-fit: cover;
+    object-position: center top;
+}
